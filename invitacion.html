@@ -43,14 +43,22 @@
     .ubicacion { top: 59%; }
     .confirmar { top: 80%; }
 
-    /* BRILLO */
+    /* BRILLO MEJORADO */
     .glow {
-      animation: brillo 2s infinite alternate;
+      border-radius: 25px;
+      animation: brillo 1.8s infinite;
     }
 
     @keyframes brillo {
-      from { box-shadow: 0 0 5px rgba(255,255,255,0.2); }
-      to { box-shadow: 0 0 20px rgba(255,215,160,0.9); }
+      0% {
+        box-shadow: 0 0 0 rgba(255,215,160,0);
+      }
+      50% {
+        box-shadow: 0 0 22px rgba(255,215,160,0.9);
+      }
+      100% {
+        box-shadow: 0 0 0 rgba(255,215,160,0);
+      }
     }
 
     /* BOTÓN MÚSICA */
@@ -125,12 +133,13 @@
     .si { background: #c08a9e; color: white; }
     .no { background: #e0a7b7; color: white; }
     .cerrar { background: transparent; color: #9c6073; }
+
   </style>
 </head>
 
 <body>
 
-  <!-- AUDIO -->
+  <!-- AUDIO MÚSICA -->
   <audio id="musica" loop>
     <source src="musica.mp3" type="audio/mpeg">
   </audio>
@@ -138,12 +147,14 @@
   <button class="music-btn" onclick="activarMusica()">♫ Activar música</button>
 
   <div class="wrap">
-    <img src="invitacion.png">
+    <img src="invitacion.png" alt="Invitación Ashley XV">
 
+    <!-- UBICACIÓN -->
     <a class="btn ubicacion glow"
        href="https://maps.app.goo.gl/vXV5YjBapW6pfaeD9"
        target="_blank"></a>
 
+    <!-- CONFIRMAR -->
     <div class="btn confirmar glow" onclick="abrirPopup()"></div>
   </div>
 
@@ -176,11 +187,11 @@
     }
 
     function asistire() {
-      window.open("https://wa.me/4915561264387?text=Hola%20Ashley%20💖%0ACon%20muchísima%20ilusión%20te%20confirmo%20que%20asistiré%20a%20tus%20XV.%20Será%20un%20honor%20acompañarte%20✨", "_blank");
+      window.open("https://wa.me/4915561264387?text=Hola%20Ashley%20💖%0ACon%20muchísima%20ilusión%20te%20confirmo%20que%20asistiré%20a%20tus%20XV.%20Será%20un%20honor%20acompañarte%20en%20un%20día%20tan%20especial%20✨", "_blank");
     }
 
     function noAsistire() {
-      window.open("https://wa.me/4915561264387?text=Hola%20Ashley%20💖%0AGracias%20de%20corazón%20por%20la%20invitación.%20No%20podré%20asistir,%20pero%20te%20deseo%20una%20noche%20mágica%20✨", "_blank");
+      window.open("https://wa.me/4915561264387?text=Hola%20Ashley%20💖%0AQuiero%20agradecerte%20de%20corazón%20por%20tu%20invitación.%20Lamentablemente%20no%20podré%20asistir,%20pero%20te%20deseo%20una%20celebración%20hermosa%20y%20llena%20de%20momentos%20inolvidables%20✨", "_blank");
     }
   </script>
 
